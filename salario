@@ -1,0 +1,24 @@
+using System;
+
+class Teste
+{   
+    static void Second()
+    {  
+        Console.WriteLine("Digite o nome do funcionario: ");
+            string nome =Console.ReadLine();
+
+        Console.WriteLine("Digite as horas trabalhadas na semana: ");
+            int horas =Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Digite o valor de pagamento por hora: ");
+            double pgh =Convert.ToDouble(Console.ReadLine());
+        
+        Console.WriteLine("Digite o valor das comissoes recebidas na semana: ");
+            decimal comissao =Convert.ToDecimal(Console.ReadLine());
+
+        decimal monei =(decimal)(horas * pgh) + comissao;
+
+        Console.WriteLine($"boa noite, o salario do {nome}, nessa semana foi de: {monei}");
+        
+    }
+}
