@@ -1,0 +1,28 @@
+using System;
+
+class Dog
+{
+    public string Cachorro()
+    {
+        return @"
+           __
+      (___()'`;
+      /,    /`
+      \\""--\\";
+    }
+    
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        //criar uma instância da classe dog
+        Dog dog = new Dog(); //Criar uma instância da classe
+        string dogDrawing = dog.Cachorro();//chamar o método para obter o
+        
+        Console.WriteLine(dogDrawing)
+       // string dog = "  / \\__\r\n (    @\\___\r\n /         O\r\n/   (_____/\r\n/_____/ U\r\n";
+        //Console.WriteLine(dog);
+    }
+}
