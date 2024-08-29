@@ -1,0 +1,114 @@
+using System;
+using System.Reflection.Metadata;
+
+class Dog : IDrawing
+{
+    public string Name => "Cachorro";
+    public string GetDogDrawing()
+    {
+        return @"
+           __
+      (___()'`;
+      /,    /`
+      \\""--\\";
+    }
+    //todo: fazer os demais animais...
+}
+class Cat : IDrawing
+{
+    public string Name => "Gato";
+    public string GetCatDrawing()
+    {
+        return @"
+        |\---/|
+        | o_o |
+         \_^_/";
+    }
+
+}
+class Fish : IDrawing
+{
+    public string Name => "Peixe";
+    public string GetFishDrawing()
+    {
+        return @"
+         /\_/\
+        ((@v@))
+        ():::()";
+    }
+
+}
+class Bird : IDrawing
+{
+    public StringHandle Name => "Passarinho";
+    public StringHandle GetBirdDrawing()
+    {
+        return @"
+        aiaiaiaiai
+        morri";
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        List<IDrawing> drawgins = new List<IDrawing> { new Dog() }, new Cat(), new Fish(), new Bird(); }
+
+        bool running = true;
+        while (running)
+        {
+            Console.Clear();
+            Console.WriteLine("Escolha uma opção de desenho:");
+            Console.WriteLine("1 - Cachorro");
+            Console.WriteLine("2 - gato");
+            Console.WriteLine("3- peixe");
+            Console.WriteLine("4- peixe");
+            Console.WriteLine("5- encerrar o programa");
+            Console.WriteLine("--------------------");
+            Console.WriteLine("digite sua escolha:");
+
+            string escolhaUsuario = Console.ReadLine();
+
+            switch (escolhaUsuario)
+            {
+                case "1":
+                    Dog dog = new Dog();
+                    Console.WriteLine(dog.GetDogDrawing());
+                    break;
+                case "2":
+                    Cat cat = new Cat();
+                    Console.WriteLine(cat.GetCatDrawing());
+                    break;
+                case "3":
+                    Fish fish = new Fish();
+                    Console.WriteLine(fish.GetFishDrawing());
+                    break;
+                case "4":
+                    Bird bird = new Bird();
+                    Console.WriteLine(bird.GetBirdDrawing());
+                    break;
+                case "5":
+                    running = false;
+                    Console.WriteLine("fechando o sistema...");
+                    break;
+                default:
+                    Console.WriteLine("opção inválida. Tente novamente ai menzinho");
+                    break;
+
+            }
+            if (running)
+            {
+                Console.WriteLine("Pressione qualquer tecla pra começar dnv");
+                Console.ReadKey();
+            }
+        }
+    }
+    Static void MostrarDesenenho(List<IDrawing> drawings)
+    {
+        Console.WriteLine("Escolha um desenho para mostraR:"
+        for (int i = 0; int< drawings.Count;int++){
+            
+        }
+    }
+}
