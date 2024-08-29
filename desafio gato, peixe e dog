@@ -1,0 +1,86 @@
+using System;
+
+class Dog
+{
+    public string GetDogDrawing()
+    {
+        return @"
+           __
+      (___()'`;
+      /,    /`
+      \\""--\\";
+    }
+
+}
+class Cat
+{
+    public string GetCatDrawing()
+    {
+        return @"
+        |\---/|
+        | o_o |
+         \_^_/";
+    }
+
+}
+class Fish
+{
+    public string GetFishDrawing()
+    {
+        return @"
+         /\_/\
+        ((@v@))
+        ():::()";
+    }
+
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        bool running = true;
+        while (running)
+        {
+            Console.Clear();
+            Console.WriteLine("Escolha uma opção de desenho:");
+            Console.WriteLine("1 - Cachorro");
+            Console.WriteLine("2 - gato");
+            Console.WriteLine("3- peixe");
+            Console.WriteLine("0- encerrar o programa");
+            Console.WriteLine("--------------------");
+            Console.WriteLine("digite sua escolha:");
+
+            string escolhaUsuario = Console.ReadLine();
+
+            switch (escolhaUsuario)
+            {
+                case "1":
+                    Dog dog = new Dog();
+                    Console.WriteLine(dog.GetDogDrawing());
+                    break;
+                case "2":
+                    Cat cat = new Cat();
+                    Console.WriteLine(cat.GetCatDrawing());
+                    break;
+                case "3":
+                    Fish fish = new Fish();
+                    Console.WriteLine(fish.GetFishDrawing());
+                    break;
+                case "4":
+                    running = false;
+                    Console.WriteLine("fechando o sistema...");
+                    break;
+                default:
+                    Console.WriteLine("opção inválida. Tente novamente ai menzinho");
+                    break;
+
+            }
+            if (running)
+            {
+                Console.WriteLine("Pressione qualquer tecla pra começar dnv");
+                Console.ReadKey();
+            }
+        }
+    }
+}
